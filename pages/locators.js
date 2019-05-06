@@ -1,15 +1,15 @@
 const Locators = function() {
-  const firstInputBox = element(by.model('first'));
-  const secondInputBox = element(by.model('second'));
-  const goButton = element(by.id('gobutton'));
+  const firstInputBox = element(by.model("first"));
+  const secondInputBox = element(by.model("second"));
+  const goButton = element(by.id("gobutton"));
   //tagname[attribute="value"]
   const result = $('h2[class="ng-binding"]');
 
-  this.enterFirstValue = (number) => {
+  this.enterFirstValue = number => {
     firstInputBox.sendKeys(number);
   };
 
-  this.enterSecondValue = (number) => {
+  this.enterSecondValue = number => {
     secondInputBox.sendKeys(number);
   };
 
