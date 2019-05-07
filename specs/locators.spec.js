@@ -1,5 +1,4 @@
 const locators = require("../pages/locators");
-const assert = require('assert');
 
 describe("Protractor demo homepage test suite: ", () => {
   beforeAll(() => {
@@ -10,13 +9,6 @@ describe("Protractor demo homepage test suite: ", () => {
     locators.enterFirstValue("3");
     locators.enterSecondValue("5");
     locators.clickGoButton();
-    locators
-      .getResult()
-      .then((text) => {
-        assert.equal(text, "9");
-      })
-      .catch(error => {
-        console.error("The sum is invalid", error);
-      });
+    expect(locators.getResult()).toBe("8");
   });
 });
