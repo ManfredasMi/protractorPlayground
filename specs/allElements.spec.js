@@ -1,6 +1,6 @@
 const allElements = require("../pages/allElements");
 
-describe("Protractor demo chain locators test suite: ", () => {
+describe("Protractor all locator test suite: ", () => {
   beforeAll(() => {
     browser.get("https://juliemr.github.io/protractor-demo/");
   });

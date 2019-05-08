@@ -43,7 +43,7 @@ const AllElements = function() {
   // mine method:
 
   //   this.result = () => {
-  //     return allResults.getText().then((text) => {
+  //     allResults.getText().then((text) => {
   //       console.log(text);
   //     });
   //   };
