@@ -1,11 +1,8 @@
 const forms = require("../pages/forms");
 
 describe("Protractor forms test suite: ", () => {
-  beforeAll(() => {
-    browser.driver
-      .manage()
-      .window()
-      .maximize(); // maximize the web window
+  // run before each it
+  beforeEach(() => {
     browser.get("http://qaclickacademy.github.io/protocommerce");
   });
 
@@ -26,6 +23,11 @@ describe("Protractor forms test suite: ", () => {
     expect(forms.validateNameErrorMessage()).toBe("Name should be at least 2 characters");
     browser.sleep(4000);
   });
+
+  // run after each it
+  // afterEach(() => {
+  //   browser.close();
+  // });
 });
 
 

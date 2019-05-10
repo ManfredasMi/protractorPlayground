@@ -6,6 +6,13 @@ exports.config = {
     showColors: true // Use colors in the command line report.
   },
   capabilities: {
-    'browserName': 'chrome'
+    browserName: "chrome"
+  },
+  onPrepare: () => {
+    // maximize the web window
+    browser.driver
+      .manage()
+      .window()
+      .maximize();
   }
 };
