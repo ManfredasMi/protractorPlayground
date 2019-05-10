@@ -1,8 +1,9 @@
 const locators = require("../pages/locators");
+const url = require("../pages/urls");
 
 describe("Protractor locators test suite: ", () => {
   beforeAll(() => {
-    browser.get("https://juliemr.github.io/protractor-demo/");
+    url.getUrl();
   });
 
   it("Add two values and show result", () => {

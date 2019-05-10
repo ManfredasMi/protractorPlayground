@@ -1,8 +1,9 @@
 const allElements = require("../pages/allElements");
+const url = require("../pages/urls");
 
 describe("Protractor all locator test suite: ", () => {
   beforeAll(() => {
-    browser.get("https://juliemr.github.io/protractor-demo/");
+    url.getUrl();
   });
 
   it("Add two values and show result", () => {

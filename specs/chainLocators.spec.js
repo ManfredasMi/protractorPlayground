@@ -1,8 +1,9 @@
 const chainLocators = require("../pages/chainLocators");
+const url = require("../pages/urls");
 
 describe("Protractor chain locators test suite: ", () => {
     beforeAll(() => {
-      browser.get("https://juliemr.github.io/protractor-demo/");
+      url.getUrl();
     });
   
     it("Add two values and show result", () => {

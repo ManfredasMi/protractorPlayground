@@ -1,8 +1,9 @@
 const dropdown = require("../pages/dropdown")
+const url = require("../pages/urls");
 
 describe("Protractor dropdown test suite: ", () => {
     beforeAll(() => {
-      browser.get("https://juliemr.github.io/protractor-demo/");
+      url.getUrl();
     });
   
     it("Add two values, operator and show result", () => {
