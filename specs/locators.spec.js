@@ -9,6 +9,6 @@ describe("Protractor locators test suite: ", () => {
     locators.enterFirstValue("3");
     locators.enterSecondValue("5");
     locators.clickGoButton();
-    expect(locators.getResult()).toBe("8");
+    expect(locators.getResult()).toEqual("8");
   });
 });

@@ -7,6 +7,9 @@ const Forms = function() {
   //   const gender = element(by.cssContainingText("#exampleFormControlSelect1 option", "Female"))
   const radioButton = element.all(by.name("inlineRadioOptions"));
   const submit = element(by.buttonText("Submit"));
+  // const submitMessage = $(".alert strong");
+  const submitMessage = $("div[class*='success']");
+  const nameErrorMessage = $(".form-group .alert");     // alt selector: [class="alert alert-danger"]
 
   this.inputName = text => {
     nameFieldBox.sendKeys(text);
@@ -35,5 +38,15 @@ const Forms = function() {
   this.clickSubmit = () => {
     submit.click();
   };
+
+  this.getSuccessMessage = () => {
+    submitMessage.getText().then(text => {
+      console.log(text);
+    });
+  };
+
+  this.validateNameErrorMessage = () => {
+    return nameErrorMessage.getText();
+  }
 };
 module.exports = new Forms();
