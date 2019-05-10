@@ -1,16 +1,16 @@
 const Sync = function() {
-  const EC = protractor.ExpectedConditions;
-  const link = $("a[href*='loadAjax']");
-  const results = element(by.id("results"));
-  const spinner = element(by.id("loader"));
+  this.EC = protractor.ExpectedConditions;
+  this.link = $("a[href*='loadAjax']");
+  this.results = element(by.id("results"));
+  this.spinner = element(by.id("loader"));
 
   this.clickLink = () => {
-    link.click();
+    this.link.click();
   };
 
   this.getResult = () => {
-    browser.wait(EC.invisibilityOf(spinner), 8000);
-    results.getText().then(text => {
+    browser.wait(this.EC.invisibilityOf(this.spinner), 8000);
+    this.results.getText().then(text => {
       console.log(text);
     });
   };

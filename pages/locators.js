@@ -1,24 +1,24 @@
 const Locators = function() {
-  const firstInputBox = element(by.model("first"));
-  const secondInputBox = element(by.model("second"));
-  const goButton = element(by.id("gobutton"));
+  this.firstInputBox = element(by.model("first"));
+  this.secondInputBox = element(by.model("second"));
+  this.goButton = element(by.id("gobutton"));
   //tagname[attribute="value"]
-  const result = $('h2[class="ng-binding"]');
+  this.result = $('h2[class="ng-binding"]');
 
   this.enterFirstValue = number => {
-    firstInputBox.sendKeys(number);
+    this.firstInputBox.sendKeys(number);
   };
 
   this.enterSecondValue = number => {
-    secondInputBox.sendKeys(number);
+    this.secondInputBox.sendKeys(number);
   };
 
   this.clickGoButton = () => {
-    goButton.click();
+    this.goButton.click();
   };
 
   this.getResult = () => {
-    return result.getText();
+    return this.result.getText();
   };
 };
 module.exports = new Locators();

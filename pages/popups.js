@@ -1,8 +1,8 @@
 const Popups = function() {
-  const confirm = element(by.id("confirmbtn"));
+  this.confirm = element(by.id("confirmbtn"));
 
   this.popupAccepted = () => {
-    confirm.click();
+    this.confirm.click();
     browser.switchTo().alert().accept();
     // opposite to accept
     // browser.switchTo().alert().dismiss();
