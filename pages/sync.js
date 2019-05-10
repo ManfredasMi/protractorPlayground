@@ -1,6 +1,5 @@
-let EC = protractor.expectedConditions;
-
 const Sync = function() {
+  const EC = protractor.ExpectedConditions;
   const link = $("a[href*='loadAjax']");
   const results = element(by.id("results"));
   const spinner = element(by.id("loader"));
