@@ -10,6 +10,10 @@ exports.config = {
   capabilities: {
     browserName: "chrome"
   },
+  suites: {
+    smoke: ['specs/chainLocators.spec.js', 'specs/dropdown.spec.js'],
+    regression: 'specs/actions.spec.js'
+  },
   onPrepare: () => {
     // maximize the web window
     browser.driver
