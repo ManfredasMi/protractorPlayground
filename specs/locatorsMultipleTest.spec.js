@@ -9,7 +9,7 @@ describe("Protractor locators test suite: ", () => {
   });
 
   using(objectDataProvider.datadriven, (data, description) => {
-    it("Add two values and test result", () => {
+    it("Add two values and test result " + description, () => {
       locatorsMultipleTest.enterFirstValue(data.firstValue);
       locatorsMultipleTest.enterSecondValue(data.secondValue);
       locatorsMultipleTest.clickGoButton();
