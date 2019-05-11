@@ -13,6 +13,7 @@
   "author": "Manfredas",
   "license": "ISC",
   "dependencies": {
+    "jasmine-data-provider": "^2.2.0",
     "lint": "^1.1.2",
     "protractor": "^5.4.2",
     "selenium": "^2.20.0",

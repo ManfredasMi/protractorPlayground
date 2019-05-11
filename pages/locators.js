@@ -1,3 +1,5 @@
+const testData = require("../testData/testData");
+
 const Locators = function() {
   this.firstInputBox = element(by.model("first"));
   this.secondInputBox = element(by.model("second"));
@@ -5,12 +7,12 @@ const Locators = function() {
   //tagname[attribute="value"]
   this.result = $('h2[class="ng-binding"]');
 
-  this.enterFirstValue = number => {
-    this.firstInputBox.sendKeys(number);
+  this.enterFirstValue = () => {
+    this.firstInputBox.sendKeys(testData.values.firstValue);
   };
 
-  this.enterSecondValue = number => {
-    this.secondInputBox.sendKeys(number);
+  this.enterSecondValue = () => {
+    this.secondInputBox.sendKeys(testData.values.secondValue);
   };
 
   this.clickGoButton = () => {

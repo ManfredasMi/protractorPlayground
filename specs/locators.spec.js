@@ -1,5 +1,6 @@
 const locators = require("../pages/locators");
 const url = require("../pages/urls");
+const testData = require("../testData/testData");
 
 describe("Protractor locators test suite: ", () => {
   beforeAll(() => {
@@ -7,9 +8,12 @@ describe("Protractor locators test suite: ", () => {
   });
 
   it("Add two values and show result", () => {
-    locators.enterFirstValue("3");
-    locators.enterSecondValue("5");
+    locators.enterFirstValue();
+    locators.enterSecondValue();
     locators.clickGoButton();
-    expect(locators.getResult()).toEqual("8");
+    expect(locators.getResult()).toEqual(testData.values.result);
+  });
+  afterAll(() => {
+    console.log("Test is complete");
   });
 });
