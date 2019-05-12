@@ -11,8 +11,7 @@ describe("Protractor dynamic sections handling test suite: ", () => {
   it("Testing handling", () => {
     dynamicSections.clickShop();
     dynamicSections.clickAddToCartIphoneX();
-    // expect(forms.validateNameErrorMessage()).toBe("Name should be at least 2 characters");
-    browser.sleep(4000);
+    dynamicSections.countCheckoutItems();
   });
   afterEach(() => {
     console.log("Test is complete");
