@@ -10,7 +10,8 @@ describe("Protractor dynamic sections handling test suite: ", () => {
 
   it("Testing handling", () => {
     dynamicSections.clickShop();
-    dynamicSections.clickAddToCartIphoneX();
+    dynamicSections.clickAddPhoneToCart("iphone X");
+    dynamicSections.clickAddPhoneToCart("Samsung Note 8");
     dynamicSections.countCheckoutItems();
   });
   afterEach(() => {

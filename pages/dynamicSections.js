@@ -10,20 +10,14 @@ const DynamicSections = function() {
     this.shop.click();
   };
 
-  this.clickAddToCartIphoneX = () => {
+  this.clickAddPhoneToCart = phone => {
     element.all(this.allBuyOptions).each(item => {
       item
         .$$(this.allCardTitles)
         .getText()
         .then(text => {
-          if (text == "Samsung Note 8") {
-            console.log("Looking for Samsung Note 8, added " + text);
+          if (text == phone) {
             item.$(this.addToCart).click();
-          } else if (text == "iphone X") {
-            console.log("Looking for iphone x, added " + text);
-            item.$(this.addToCart).click();
-          } else {
-            console.log("Not any of wanted phones, looping foward.");
           }
         });
     });
@@ -34,7 +28,7 @@ const DynamicSections = function() {
       .getText()
       .then(number => {
         var phoneCount = number.split("(");
-        expect(phoneCount[1].trim().charAt(0)).toEqual("2");   // have to fix that expect was in spec
+        expect(phoneCount[1].trim().charAt(0)).toEqual("2"); // have to fix that expect was in spec
         console.log("The checkout has items in it: " + number);
       });
   };
