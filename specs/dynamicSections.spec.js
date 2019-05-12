@@ -12,7 +12,7 @@ describe("Protractor dynamic sections handling test suite: ", () => {
     dynamicSections.clickShop();
     dynamicSections.clickAddPhoneToCart("iphone X");
     dynamicSections.clickAddPhoneToCart("Samsung Note 8");
-    dynamicSections.countCheckoutItems();
+    expect(dynamicSections.countCheckoutItems()).toEqual("2");
   });
   afterEach(() => {
     console.log("Test is complete");

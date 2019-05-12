@@ -28,8 +28,7 @@ const DynamicSections = function() {
       .getText()
       .then(number => {
         var phoneCount = number.split("(");
-        expect(phoneCount[1].trim().charAt(0)).toEqual("2"); // have to fix that expect was in spec
-        console.log("The checkout has items in it: " + number);
+        return phoneCount[1].trim().charAt(0);
       });
   };
 };
