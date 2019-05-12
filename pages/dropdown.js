@@ -5,6 +5,7 @@ const Dropdown = function() {
   this.operator = element.all(by.tagName("option"));
   this.divide = $('option[value="MULTIPLICATION"]');
   this.allRepeaters = element.all(by.repeater("result in memory"));
+  this.result = ("td:nth-child(3)");
 
   this.calculation = (a, b, c) => {
     this.firstInputBox.sendKeys(a);
@@ -22,7 +23,7 @@ const Dropdown = function() {
   this.allResults = () => {
     this.allRepeaters.each(item => {
       item
-        .$("td:nth-child(3)")    // why I can't use result const in here???
+        .$(this.result)
         .getText()
         .then(text => {
           console.log(text);

@@ -1,9 +1,9 @@
 const forms = require("../pages/forms");
+const urls = require("../pages/urls");
 
 describe("Protractor forms test suite: ", () => {
-  // run before each it
   beforeEach(() => {
-    browser.get("http://qaclickacademy.github.io/protocommerce");
+    urls.getUrlEcommerce();
   });
 
   xit("Test forms", () => {
@@ -23,11 +23,9 @@ describe("Protractor forms test suite: ", () => {
     expect(forms.validateNameErrorMessage()).toBe("Name should be at least 2 characters");
     browser.sleep(4000);
   });
-
-  // run after each it
-  // afterEach(() => {
-  //   browser.close();
-  // });
+  afterEach(() => {
+    console.log("Test is complete");
+  });
 });
 
 
